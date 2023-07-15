@@ -81,7 +81,7 @@ for x in range(len(data)):
 """Plotting Data"""
 data["Buy Signals"] = buy
 data["sell Signals"] = sell
-plt.plot(data["Adj Close"], label="Share Price", color="blue")
+plt.plot(data["Adj Close"], label=data_request, color="blue")
 plt.plot(data[f"SMA_{ma_1}"], label=f"SMA_{ma_1}", color="orange", linestyle="--")
 plt.plot(data[f"SMA_{ma_2}"], label=f"SMA_{ma_2}", color="red", linestyle="--")
 plt.scatter(data.index, data["Buy Signals"], label="Buy Signal", marker="^", color="#00ff00", lw=3)
